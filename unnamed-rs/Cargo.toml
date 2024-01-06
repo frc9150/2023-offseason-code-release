@@ -1,0 +1,23 @@
+[package]
+name = "frc"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "frc"
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+tokio = { version = "1.32", features = ["full"] }
+async-timer = { version = "1.0.0-beta.10", features = ["std", "tokio1"] }
+anyhow = "1.0"
+cxx = "1.0"
+#frc-derive = { path = "frc-derive" }
+thiserror = "1.0"
+nalgebra = "0.32"
+num-traits = "0.2"
+#simba = "0.8"
+
+
+[build-dependencies]
+cxx-build = "1.0"
